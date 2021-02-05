@@ -7,15 +7,15 @@ var set_html_style = {
     document.body.style.fontSize = "24px";  // 1px = 0.75pt; px = pt * DPI / 72
     document.body.style.fontFamily = "等线";
     document.body.style.fontWeight = "bold";  // or "normal"
-    // document.body.style.cursor = 'default' // 'default', 'none', 'wait', ...
-    // document.body.onselectstart = function() { return false } // 禁止选中文字 <body oncontextmenu="return false">
-    // document.body.oncontextmenu = function() { return false } // 禁用鼠标右键 <body onselectstart="return false">
-    // document.onkeydown = function() {
-    //     // 屏蔽键盘按键 (https://www.bejson.com/othertools/keycodes/)
-    //     if ((event.keyCode in { 27: 'Esc', 116: 'F5', 123: 'F12' }) ||
-    //         (event.ctrlKey && event.keyCode in { 85: 'U' })
-    //     ) { return false }
-    // }
+    document.body.style.cursor = 'default' // 'default', 'none', 'wait', ...
+    document.body.onselectstart = function() { return false } // 禁止选中文字 <body oncontextmenu="return false">
+    document.body.oncontextmenu = function() { return false } // 禁用鼠标右键 <body onselectstart="return false">
+    document.onkeydown = function() {
+        // 屏蔽键盘按键 (https://www.bejson.com/othertools/keycodes/)
+        if ((event.keyCode in { 27: 'Esc', 116: 'F5', 123: 'F12' }) ||
+            (event.ctrlKey && event.keyCode in { 85: 'U' })
+        ) { return false }
+    }
   },
 };
 
@@ -45,8 +45,8 @@ var arr = [0,1,2,3,4];
 var subject_arr = randSort1(arr);
 
 // 问卷随机填写一个版本
-var Q_v1 = '<a target=_blank href=https:/www.wjx.cn/jq/104106776.aspx>问卷链接</a>';
-var Q_v2 = '<a target=_blank href=https:/www.wjx.cn/jq/104122961.aspx>问卷链接</a>';
+var Q_v1 = '<a target=_blank href=https://www.wjx.cn/jq/104106776.aspx>问卷链接</a>';
+var Q_v2 = '<a target=_blank href=https://www.wjx.cn/jq/104122961.aspx>问卷链接</a>';
 var Final_Q = [];
 var randomNum = parseInt(Math.random()*2+1); // 生成1和2中的随机数
 
