@@ -1,3 +1,7 @@
+// 网页阅读实验
+// By Lu Li from BNUPSY
+// 2021.01-2021.02
+
 //设置网页背景、字体等
 var set_html_style = {
   type: "call-function",
@@ -45,8 +49,8 @@ var arr = [0,1,2,3,4];
 var subject_arr = randSort1(arr);
 
 // 问卷随机填写一个版本
-var Q_v1 = '<a target=_blank href=https://www.wjx.cn/jq/104106776.aspx>问卷链接</a>';
-var Q_v2 = '<a target=_blank href=https://www.wjx.cn/jq/104122961.aspx>问卷链接</a>';
+var Q_v1 = '<a target=_blank href=https:/www.wjx.cn/jq/104106776.aspx>问卷链接</a>';
+var Q_v2 = '<a target=_blank href=https:/www.wjx.cn/jq/104122961.aspx>问卷链接</a>';
 var Final_Q = [];
 var randomNum = parseInt(Math.random()*2+1); // 生成1和2中的随机数
 
@@ -190,7 +194,7 @@ var keywordsInstr = {
     <p style='font: bold  20px 等线; text-align: center; line-height:25px'>
     接下来您将阅读到5篇科学论文风格的说明文。<br/>
     为了更好地理解文章内容，把握文章核心主旨、观点，<br/>
-    <span style='color:red'>【为每一篇文章总结出能够体现文章要义的若干个关键词】</span>是一种较为有效的方法。<br/>
+    <span style='color:red'>【为每一篇文章总结出能够体现文章要义的若干个关键词】<br/></span>是一种较为有效的方法。<br/>
     e.g.《泰坦尼克号》的关键词为：冰山、船遇难、悲剧……<br/><br/>
     我们将在练习阶段给出这一方法的一个具体示例。<br/>
     请您在此次阅读任务中使用这种方法。<br/><br/>
@@ -236,11 +240,11 @@ var keywordsExample = {
     <p style='font: bold  20px 等线; text-align: left; line-height:28px'>
     根据《人类的进化停止了》一文的内容，<br/>
     为了便于理解作者表达的含义，总结出以下<span style='color:red'>5个关键词</span>：
-    <li style='font: bold  20px 等线; text-align: center; line-height:28px'>关键词1</li>
-    <li style='font: bold  20px 等线; text-align: center; line-height:28px'>关键词2</li>
-    <li style='font: bold  20px 等线; text-align: center; line-height:28px'>关键词3</li>
-    <li style='font: bold  20px 等线; text-align: center; line-height:28px'>关键词4</li>
-    <li style='font: bold  20px 等线; text-align: center; line-height:28px'>关键词5</li>
+    <li style='font: bold  20px 等线; text-align: center; line-height:28px'>男女比</li>
+    <li style='font: bold  20px 等线; text-align: center; line-height:28px'>男性过剩</li>
+    <li style='font: bold  20px 等线; text-align: center; line-height:28px'>少生孩子</li>
+    <li style='font: bold  20px 等线; text-align: center; line-height:28px'>进化结束</li>
+    <li style='font: bold  20px 等线; text-align: center; line-height:28px'>长相不变</li>
     <p style='font: bold  20px 等线; text-align: left; line-height:28px'>
     请您结合刚才的阅读，体会在阅读文章后“总结关键词”的方法，<br/>
     并在接下来的正式任务中使用这一方法，以促进对文章的理解。</p>
@@ -554,7 +558,7 @@ for(var i = 0; i < 5; i++) {
 
 /* reading questions */
 var zoo_items = [
-  { data: { question: 'zoo1', correct_answer: "D"},
+  { data: { question: 'zoo1', correct_answer: "D", type:"inference"},
     preamble: '【《动物园》 第1题】<br/>这篇文章的主要意图是：',
     html: `
       <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -564,7 +568,7 @@ var zoo_items = [
       <option>C.促进科学家对动物行为做更多的研究</option>
       <option>D.引起对野生动物在动物园中的监禁生活的关注</option>
       </select></p>`, },
-  { data: { question: 'zoo2', correct_answer: "A"},
+  { data: { question: 'zoo2', correct_answer: "A", type:"detail"},
     preamble: '【《动物园》 第2题】<br/>文中提到动物园是如何想办法减轻动物的压力的？',
     html: `
       <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -575,7 +579,7 @@ var zoo_items = [
       <option>D.他们提供饲养和照料</option>
       </select></p>`,},
 
-  { data: { question: 'zoo3', correct_answer: "C"},
+  { data: { question: 'zoo3', correct_answer: "C", type:"inference"},
     preamble: '【《动物园》 第3题】<br/>这篇文章的一个主要含义是',
     html: `
       <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -586,7 +590,7 @@ var zoo_items = [
       <option>D.媒体已经引起了公众对物种灭绝的关注</option>
       </select></p>`,},
 
-  { data: { question: 'zoo4', correct_answer: "A"},
+  { data: { question: 'zoo4', correct_answer: "A", type:"inference"},
     preamble: '【《动物园》 第4题】<br/>下面哪种说法与文章对圈养动物的看法最不一致？',
     html: `
       <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -597,7 +601,7 @@ var zoo_items = [
       <option>D.圈养动物增强了人们的动物权利意识</option>
       </select></p>`,},
 
-{ data: { question: 'zoo5', correct_answer: "A"},
+{ data: { question: 'zoo5', correct_answer: "A", type:"detail"},
   preamble: '【《动物园》 第5题】<br/>下面哪个关于野生动物的问题在文中没有做出回答？',
   html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -608,7 +612,7 @@ var zoo_items = [
     <option>D.哪些信号表明动物园的动物有压力？</option>
     </select></p>`,},
 
-{ data: { question: 'zoo6', correct_answer: "A"},
+{ data: { question: 'zoo6', correct_answer: "A", type:"inference"},
   preamble: '【《动物园》 第6题】<br/>从文中可以看出作者认为野生动物：',
   html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -619,7 +623,7 @@ var zoo_items = [
     <option>D.对圈养环境的设计不能提供充分的依据</option>
     </select></p>`,},
 
-{ data: { question: 'zoo7', correct_answer: "A"},
+{ data: { question: 'zoo7', correct_answer: "A", type:"detail"},
   preamble: '【《动物园》 第7题】<br/>作者认为下面哪个原因导致了动物的灭绝？',
   html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -631,7 +635,7 @@ var zoo_items = [
     <option>E.由于人类过度猎捕引起的灭绝</option>
     </select></p>`,},
 
-{ data: { question: 'zoo8', correct_answer: "C"},
+{ data: { question: 'zoo8', correct_answer: "C", type:"detail"},
   preamble: '【《动物园》 第8题】<br/>下列哪一信号表明了一些动物有压力？',
   html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -647,7 +651,7 @@ var zoo_items = [
 ];
 
 var news_items = [
-  { data: { question: 'news1', correct_answer: "A"},
+  { data: { question: 'news1', correct_answer: "A", type:"detail"},
     preamble: '【《电视新闻》 第1题】<br/>短文描述在二十世纪六十年代，当晚间新闻报道关于非暴力反抗运动的新闻时：',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -657,7 +661,7 @@ var news_items = [
     <option>C.它煽动了一系列孤立的当地事件</option>
     <option>D.观众形成了对政治领袖的看法</option>
     </select></p>`, },
-  { data: { question: 'news2', correct_answer: "B"},
+  { data: { question: 'news2', correct_answer: "B", type:"inference"},
     preamble: '【《电视新闻》 第2题】<br/>这篇短文主要讲了：',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -668,7 +672,7 @@ var news_items = [
     <option>D.电视新闻的观众不能区分事实和谎言</option>
     </select></p>`, },
 
-{ data: { question: 'news3', correct_answer: "C"},
+{ data: { question: 'news3', correct_answer: "C", type: "inference"},
   preamble: '【《电视新闻》 第3题】<br/>可以从这篇短文推断出在下述哪种情况下电视新闻能更好地告知公众意见？',
   html: `
   <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -679,7 +683,7 @@ var news_items = [
   <option>D.高度机密信息不再出现在电视新闻上</option>
   </select></p>`, },
 
-{ data: { question: 'news4', correct_answer: "D"},
+{ data: { question: 'news4', correct_answer: "D", type: "inference"},
   preamble: '【《电视新闻》 第4题】<br/>如果是事实，那么下面所述的哪一项最能增强观众对电视和美国公民权利运动的信心？',
   html: `
   <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -690,7 +694,7 @@ var news_items = [
   <option>D.二十世纪六十年代的一项民意调査表明，那些把公民权利看成是国家头等大事的美国人都曾经看过非暴力反抗的电视新闻</option>
   </select></p>`, },
 
-  { data: { question: 'news5', correct_answer: "A"},
+  { data: { question: 'news5', correct_answer: "A", type: "detail"},
     preamble: '【《电视新闻》 第5题】<br/>作者明确表示电视新闻的可信度也许要打个折扣，原因是',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -701,7 +705,7 @@ var news_items = [
     <option>D.在各角落传播的报道</option>
     </select></p>`, },
 
-{ data: { question: 'news6', correct_answer: "D"},
+{ data: { question: 'news6', correct_answer: "D", type: "detail"},
   preamble: '【《电视新闻》 第6题】<br/>根据短文，电视新闻对公民权利运动的报道没有包含下面哪一项？',
   html: `
   <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -712,7 +716,7 @@ var news_items = [
   <option>D.传达了政治领袖的意见</option>
   </select></p>`, },
 
-{ data: { question: 'news7', correct_answer: "D"},
+{ data: { question: 'news7', correct_answer: "D", type: "inference"},
   preamble: '【《电视新闻》 第7题】<br/>作者提出了电视新闻能有效影响公众意见的一个主要原因。根据这个原因，下面那一项对公众意见的影响最有效？',
   html: `
   <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -723,7 +727,7 @@ var news_items = [
   <option>D.目击事件的第一手新闻</option>
   </select></p>`, },
 
-  { data: { question: 'news8', correct_answer: "A"},
+  { data: { question: 'news8', correct_answer: "A", type: "detail"},
     preamble: '【《电视新闻》 第8题】<br/>本文提到的 Jack Nachbar是一位：',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -737,7 +741,7 @@ var news_items = [
 ];
 
 var plants_items = [
-  { data: { question: 'plants1', correct_answer: "C"},
+  { data: { question: 'plants1', correct_answer: "C", type: "inference"},
     preamble: '【《植物》 第1题】<br/>如果您在北极冰原上种植长灌木，下面哪种方法能最好地保护植物的生长？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -747,7 +751,7 @@ var plants_items = [
     <option>C.保护灌木的上半部分免受寒风的侵害</option>
     <option>D.修剪内部枝条以减少蒸发</option>
     </select></p>`, },
-  { data: { question: 'plants2', correct_answer: "D"},
+  { data: { question: 'plants2', correct_answer: "D", type: "detail"},
     preamble: '【《植物》 第2题】<br/>作者提出沙漠植物是棒状形态的原因是',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -758,7 +762,7 @@ var plants_items = [
     <option>D.长在极热并缺水的地方</option>
     </select></p>`, },
 
-  { data: { question: 'plants3', correct_answer: "C"},
+  { data: { question: 'plants3', correct_answer: "C", type: "detail"},
     preamble: '【《植物》 第3题】<br/>沙漠植物通过以下哪种途径散热？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -769,7 +773,7 @@ var plants_items = [
     <option>D.把尽可能小的表面暴露在太阳下</option>
     </select></p>`, },
 
-  { data: { question: 'plants4', correct_answer: "A"},
+  { data: { question: 'plants4', correct_answer: "A", type: "inference"},
     preamble: '【《植物》 第4题】<br/>下面哪种情况不符合文章关于植物形状和环境的观点？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -780,7 +784,7 @@ var plants_items = [
     <option>D.蒙大纳州的多风平原上长草茂盛</option>
     </select></p>`, },
 
-  { data: { question: 'plants5', correct_answer: "A"},
+  { data: { question: 'plants5', correct_answer: "A", type: "inference"},
     preamble: '【《植物》 第5题】<br/>如果您在居住的地方种植了一种叶子又宽又长的开花植物，并且它长得很茂盛。那么您所居住的地方属于下面描述的哪种气候？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -791,7 +795,7 @@ var plants_items = [
     <option>D.热，少风，干燥</option>
     </select></p>`, },
 
-  { data: { question: 'plants6', correct_answer: "D"},
+  { data: { question: 'plants6', correct_answer: "D", type: "inference"},
     preamble: '【《植物》 第6题】<br/>这篇短文主要描述了植物的哪个特征？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -802,7 +806,7 @@ var plants_items = [
     <option>D.它们能够调节热量的输出</option>
     </select></p>`, },
 
-  { data: { question: 'plants7', correct_answer: "C"},
+  { data: { question: 'plants7', correct_answer: "C", type: "detail"},
     preamble: '【《植物》 第7题】<br/>根据短文，下面哪种情况最有可能阻碍北极植物的长高？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -813,7 +817,7 @@ var plants_items = [
     <option>D.每年大量的降雪</option>
     </select></p>`, },
 
-  { data: { question: 'plants8', correct_answer: "C"},
+  { data: { question: 'plants8', correct_answer: "C", type: "detail"},
     preamble: '【《植物》 第8题】<br/>短文提到了一个把植物形状与一些因素联系的工作机制，那么下面哪个因素除外：',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -827,7 +831,7 @@ var plants_items = [
 ];
 
 var wm_items = [
-  { data: { question: 'wm1', correct_answer: "A"},
+  { data: { question: 'wm1', correct_answer: "A", type: "inference"},
     preamble: '【《职业妇女》 第1题】<br/>下面哪种说法最能够表明文章所描述的职业妇女的现状：',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -837,7 +841,7 @@ var wm_items = [
     <option>C.“妇女已经开始外出工作，她们致使一部分养家糊口的人失业。”</option>
     <option>D.“妇女在工厂里辛劳工作必定像离开了水的鱼儿一样的痛苦。”</option>
     </select></p>`, },
-  { data: { question: 'wm2', correct_answer: "C"},
+  { data: { question: 'wm2', correct_answer: "C", type: "detail"},
     preamble: '【《职业妇女》 第2题】<br/>下面哪个问题在文中没有提到？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -848,7 +852,7 @@ var wm_items = [
     <option>D.为什么单身女性比已婚女性更可能出去工作？</option>
     </select></p>`, },
 
-  { data: { question: 'wm3', correct_answer: "C"},
+  { data: { question: 'wm3', correct_answer: "C", type: "inference"},
     preamble: '【《职业妇女》 第3题】<br/>从文中可以看出在下列哪种情况下女性能更轻松地做职业妇女？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -859,7 +863,7 @@ var wm_items = [
     <option>D.如果某个年龄阶段的大多数妇女都外出工作</option>
     </select></p>`, },
 
-  { data: { question: 'wm4', correct_answer: "A"},
+  { data: { question: 'wm4', correct_answer: "A", type: "detail"},
     preamble: '【《职业妇女》 第4题】<br/>作者认为在19世纪职业妇女的薪水要低于男性是受什么影响？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -870,7 +874,7 @@ var wm_items = [
     <option>D.外出工作的妇女比例稳步提高</option>
     </select></p>`, },
 
-  { data: { question: 'wm5', correct_answer: "D"},
+  { data: { question: 'wm5', correct_answer: "D", type: "inference"},
     preamble: '【《职业妇女》 第5题】<br/>对文中所提到关于职业妇女的一对矛盾是：',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -881,7 +885,7 @@ var wm_items = [
     <option>D.妇女外出工作的现实和妇女家庭角色的理想</option>
     </select></p>`, },
 
-  { data: { question: 'wm6', correct_answer: "A"},
+  { data: { question: 'wm6', correct_answer: "A", type: "detail"},
     preamble: '【《职业妇女》 第6题】<br/>外出工作的第一个主要妇女群体是',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -892,7 +896,7 @@ var wm_items = [
     <option>D.未婚妇女的女儿</option>
     </select></p>`, },
 
-  { data: { question: 'wm7', correct_answer: "B"},
+  { data: { question: 'wm7', correct_answer: "B", type: "inference"},
     preamble: '【《职业妇女》 第7题】<br/>在19世纪晚期下面哪项措施可以扭转妇女外出工作的现状？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -903,7 +907,7 @@ var wm_items = [
     <option>D.不能工作的丈夫承担起照顾家庭的责任</option>
     </select></p>`, },
 
-  { data: { question: 'wm8', correct_answer: "A"},
+  { data: { question: 'wm8', correct_answer: "A", type: "detail"},
     preamble: '【《职业妇女》 第8题】<br/>在19世纪，大部分已婚和已为人母的职业妇女会：',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -919,7 +923,7 @@ var wm_items = [
 ];
 
 var cf_items = [
-  { data: { question: 'cf1', correct_answer: "C"},
+  { data: { question: 'cf1', correct_answer: "C", type: "inference"},
     preamble: '【《赝品》 第1题】<br/>文艺复兴时期的半身像这个例子用来说明：',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -929,7 +933,7 @@ var cf_items = [
     <option>C.一些收藏家更在乎美感而不是真实性</option>
     <option>D.很多收藏家能正确辨认赝品</option>
     </select></p>`, },
-  { data: { question: 'cf2', correct_answer: "C"},
+  { data: { question: 'cf2', correct_answer: "C", type: "inference"},
     preamble: '【《赝品》 第2题】<br/>下列哪项最能代表作者对赝品的态度？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -940,7 +944,7 @@ var cf_items = [
     <option>D.玫瑰无论叫什么名字，都还是一样的香</option>
     </select></p>`, },
 
-  { data: { question: 'cf3', correct_answer: "D"},
+  { data: { question: 'cf3', correct_answer: "D", type: "inference"},
     preamble: '【《赝品》 第3题】<br/>这篇文章讨论了哪两者间的冲突：',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -951,7 +955,7 @@ var cf_items = [
     <option>D.艺术作品的欣赏价值和真实性</option>
     </select></p>`, },
 
-  { data: { question: 'cf4', correct_answer: "C"},
+  { data: { question: 'cf4', correct_answer: "C", type: "detail"},
     preamble: '【《赝品》 第4题】<br/>作者提出的保留赝品的理由下面哪项不包含在内？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -962,7 +966,7 @@ var cf_items = [
     <option>D.映射了我们对过去的看法</option>
     </select></p>`, },
 
-  { data: { question: 'cf5', correct_answer: "A"},
+  { data: { question: 'cf5', correct_answer: "A", type: "inference"},
     preamble: '【《赝品》 第5题】<br/>下面哪种人最有可能刻意买赝品？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -973,7 +977,7 @@ var cf_items = [
     <option>D.艺术商人</option>
     </select></p>`, },
 
-  { data: { question: 'cf6', correct_answer: "B"},
+  { data: { question: 'cf6', correct_answer: "B", type: "detail"},
     preamble: '【《赝品》 第6题】<br/>作者明确指出对赝品不满主要表现在：',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -984,7 +988,7 @@ var cf_items = [
     <option>D.它们与天才艺术家没有直接联系</option>
     </select></p>`, },
 
-  { data: { question: 'cf7', correct_answer: "D"},
+  { data: { question: 'cf7', correct_answer: "D", type: "detail"},
     preamble: '【《赝品》 第7题】<br/>文章认为只有在什么情况下艺术作品的观赏者才会感到心旷神怡？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -995,7 +999,7 @@ var cf_items = [
     <option>D.作品被认定是真实的</option>
     </select></p>`, },
 
-  { data: { question: 'cf8', correct_answer: "A"},
+  { data: { question: 'cf8', correct_answer: "A", type: "detail"},
     preamble: '【《赝品》 第8题】<br/>下列哪个关于赝品的问题文中没有作出回答？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -1548,7 +1552,7 @@ var concentration = {
     }],
     timeline_variables: [
         { data: { i: 1 }, s: '您在此次网页阅读任务（包括阅读和答题）中的专注程度' },
-        { data: { i: 2 }, s: '您在平时阅读网页时的专注程度' },
+        { data: { i: 2 }, s: '平均来说，您在平时阅读网页时的专注程度' },
     ],
     randomize_order: false
 }
@@ -1568,7 +1572,7 @@ var interest = {
     }],
     timeline_variables: [
         { data: { i: 1 }, s: '您在此次网页阅读任务（包括阅读和答题）中的感兴趣程度' },
-        { data: { i: 2 }, s: '您在平时阅读网页时的感兴趣程度' },
+        { data: { i: 2 }, s: '平均来说，您在平时阅读网页时的感兴趣程度' },
     ],
     randomize_order: false
 }
