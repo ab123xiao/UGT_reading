@@ -49,8 +49,8 @@ var arr = [0,1,2,3,4];
 var subject_arr = randSort1(arr);
 
 // 问卷随机填写一个版本
-var Q_v1 = '<a target="_blank" href="http:/www.wjx.cn/jq/104106776.aspx">问卷链接</a>';
-var Q_v2 = '<a target="_blank" href="http:/www.wjx.cn/jq/104122961.aspx">问卷链接</a>';
+var Q_v1 = '<a target="_blank" href="https:/www.wjx.cn/jq/104106776.aspx">问卷链接</a>';
+var Q_v2 = '<a target="_blank" href="https:/www.wjx.cn/jq/104122961.aspx">问卷链接</a>';
 var Final_Q = [];
 var randomNum = parseInt(Math.random()*2+1); // 生成1和2中的随机数
 
@@ -123,6 +123,11 @@ var welcome = {
     点击【继续】，表示您已阅读知情同意书上的内容，决定参与本实验。<br/>
     </p>`,
 
+    `<h1 style='font: bold 24px 黑体'>实验开始前的温馨提示</h1>
+    <p style='font: bold  20px 等线; text-align: left; line-height:25px'>
+    请注意，当前页面，即<span style='color:red'>名称为“网页阅读实验”的标签页</span>，<br/>是您进行实验的页面。
+    <br/><br/>请勿在实验过程中关闭此页面！`,
+
     `<h1 style='font: bold 24px 黑体'>指导语</h1>
     <p style='font: bold  20px 等线; text-align: left; line-height:25px'>
     在实验正式开始之前，为确保最佳效果，请您：<br/>
@@ -135,6 +140,7 @@ var welcome = {
     （6）务必认真作答<br/><br/>
     如果您同意参与，并且清楚理解了上述要求，<br/>
     请点击【继续】，按照提示完成实验。</p>`,
+
   ],
 
   show_clickable_nav: true,
@@ -150,16 +156,17 @@ var questionnaire = {
     `<h1 style='font: bold 24px 黑体'>问卷填写</h1>
     <p style='font: bold  20px 等线; text-align: left; line-height:26px'>
     您参加本实验的专属ID是：<span style='color: red'>${subject_id}</span><br/>
-    请您记住这一ID，在填写问卷时输入。<br/><br/>
-    <span style='color: red'>现在请点击<${Final_Q}>填写一份问卷。</span><br/>
-    填写完毕后，请关闭问卷页面，回到本页面点击【继续】。<br/><br/><br/><br/>
+    请您记住这一ID，在填写问卷时输入。<br/>
+    <span style='color: blue'>建议您将它记在笔记本上以防遗忘~</span><br/><br/>
+    <span style='color: red'>现在请点击<${Final_Q}>填写一份问卷。<br/><br/>
+    请确保在填写完毕后，再关闭问卷页面，回到本页面。</span><br/><br/><br/><br/>
     <br/></p>`,
   ],
 
   show_clickable_nav: true,
   allow_backward: true,
   button_label_previous: "返回",
-  button_label_next: "继续",
+  button_label_next: "我已完成问卷的填写",
 };
 
 // 阅读任务指导语
@@ -181,7 +188,7 @@ var readingTaskInstr = {
   ],
 
   show_clickable_nav: true,
-  allow_backward: false,
+  allow_backward: true,
   button_label_previous: "返回",
   button_label_next: "继续",
 };
@@ -191,18 +198,18 @@ var keywordsInstr = {
   type: "instructions",
   pages: [
     `<h1 style='font: bold 24px 黑体'>阅读</h1>
-    <p style='font: bold  20px 等线; text-align: center; line-height:25px'>
-    接下来您将阅读到5篇科学论文风格的说明文。<br/>
+    <p style='font: bold  20px 等线; text-align: left; line-height:25px'>
+    接下来您将阅读到5篇科学论文风格的说明文。<br/><br/>
     为了更好地理解文章内容，把握文章核心主旨、观点，<br/>
     <span style='color:red'>【为每一篇文章总结出能够体现文章要义的若干个关键词】<br/></span>是一种较为有效的方法。<br/>
     e.g.《泰坦尼克号》的关键词为：冰山、船遇难、悲剧……<br/><br/>
     我们将在练习阶段给出这一方法的一个具体示例。<br/>
     请您在此次阅读任务中使用这种方法。<br/><br/>
-    下面请继续按照提示完成实验。<br/><br/><br/></p>`,
+    下面请继续按照提示完成实验。<br/><br/></p>`,
   ],
 
   show_clickable_nav: true,
-  allow_backward: false,
+  allow_backward: true,
   button_label_previous: "返回",
   button_label_next: "继续",
 };
@@ -219,16 +226,17 @@ var PracticeInstr = {
 
     `<h1 style='font: bold 24px 黑体'>练习</h1>
     <p style='font: bold  20px 等线; text-align: left; line-height:30px'>
-    请点击下方链接，进入一个新页面，<br/>
+    <span style='color:blue'>现在请先点击下方链接，进入一个新页面，<br/>
+    <a style='font: bold  20px 等线' target=_blank href=https://www.jianshu.com/p/0ac04a95376b>《人类的进化停止了》</a><br/>
     阅读一篇标题为“人类的进化停止了”的示例文章。<br/>
-    <a style='font: bold  20px 等线' target=_blank href=https://www.jianshu.com/p/0ac04a95376b>《人类的进化停止了》</a>
-    <br/>阅读完毕后，<span style='color:red'>请关闭该页面，</span>回到本页面，点击【继续】。
-    <br/><br/><br/><br/><br/><br/><br/></p>`,
+    <br/>请您在【阅读完毕】后，关闭这篇文章的页面，</span><br/>回到当前页面后再点击【继续】。<br/>
+    <br/><span style='color:red; text-align: left'>注意：请务必在点击上方链接并阅读完这篇文章之后，<br/>再点击下方的【继续】！！</span>
+    <br/><br/><br/><br/><br/></p>`,
 
   ],
 
   show_clickable_nav: true,
-  allow_backward: false,
+  allow_backward: true,
   button_label_previous: "返回",
   button_label_next: "继续",
 };
@@ -253,7 +261,7 @@ var keywordsExample = {
   ],
 
   show_clickable_nav: true,
-  allow_backward: false,
+  allow_backward: true,
   button_label_previous: "返回",
   button_label_next: "继续",
 };
@@ -267,7 +275,11 @@ var Prac_metacomprehension = {
         <p style="font-size: 14pt; font-weight: bold">
         现在请您评估自己对该文章的理解程度<br/>
         点击相应的数字等级即可<br/>
-        （1 = 完全不理解，7 = 完全理解）</p>`,
+        1 = 完全不理解，2 = 不理解<br/>
+        3 = 比较不理解，4 = 不确定<br/>
+        5 = 比较理解，
+        6 = 理解，
+        7 = 完全理解<br/></p>`,
         choices: ['1', '2', '3', '4', '5', '6', '7'],
         on_finish: function(data) { addRespFromButtonScale(data, 'Prac_metacomprehension') },
         post_trial_gap: 50
@@ -289,7 +301,7 @@ var Prac_test_Instr = {
   ],
 
   show_clickable_nav: true,
-  allow_backward: false,
+  allow_backward: true,
   button_label_previous: "返回",
   button_label_next: "开始测验",
 }
@@ -384,7 +396,7 @@ var Prac_end_Instr = {
   ],
 
   show_clickable_nav: true,
-  allow_backward: false,
+  allow_backward: true,
   button_label_previous: "返回",
   button_label_next: "正式开始阅读任务",
 }
@@ -404,7 +416,7 @@ var read_Instr = {
   ],
 
   show_clickable_nav: true,
-  allow_backward: false,
+  allow_backward: true,
   button_label_previous: "返回",
   button_label_next: "继续",
 }
@@ -528,7 +540,7 @@ var finish_reading_Instr = {
     您已完成5篇文章的阅读！<br/></p>`,
   ],
   show_clickable_nav: true,
-  allow_backward: false,
+  allow_backward: true,
   button_label_previous: "返回",
   button_label_next: "继续",
 }
@@ -542,7 +554,7 @@ var input_keywords_Instr = {
     分别总结出能够概括文章主旨和核心观点的5个关键词。<br/></p>`,
   ],
   show_clickable_nav: true,
-  allow_backward: false,
+  allow_backward: true,
   button_label_previous: "返回",
   button_label_next: "进入总结页面",
 }
@@ -1029,7 +1041,7 @@ var readingTest1_Instr = {
   ],
 
   show_clickable_nav: true,
-  allow_backward: false,
+  allow_backward: true,
   button_label_previous: "返回",
   button_label_next: "开始测验",
 }
@@ -1247,7 +1259,7 @@ var readingTest2_Instr = {
     </p>`,
   ],
   show_clickable_nav: true,
-  allow_backward: false,
+  allow_backward: true,
   button_label_previous: "返回",
   button_label_next: "开始测验",
 }
@@ -1376,7 +1388,7 @@ var instr_monitor = {
         7 = 完全理解</p>`,
     ],
     show_clickable_nav: true,
-    allow_backward: false,
+    allow_backward: true,
     button_label_previous: '返回',
     button_label_next: '继续'
 }
@@ -1457,7 +1469,7 @@ var reread_select_Instr = {
         请您根据自己的需要选择其中的0-5篇进行重新阅读。<br/></p>`,
     ],
     show_clickable_nav: true,
-    allow_backward: false,
+    allow_backward: true,
     button_label_previous: '返回',
     button_label_next: '进入选择页面'
 }
@@ -1596,7 +1608,7 @@ var endingInstr = {
         并将您的数据文件作为邮件附件。<br/>您可以在刚才下载的pdf文件中再次查看发送步骤。</p>`,
     ],
     show_clickable_nav: true,
-    allow_backward: false,
+    allow_backward: true,
     button_label_previous: '返回',
     button_label_next: '继续'
 }
