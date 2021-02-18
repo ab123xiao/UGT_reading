@@ -49,8 +49,8 @@ var arr = [0,1,2,3,4];
 var subject_arr = randSort1(arr);
 
 // 问卷随机填写一个版本
-var Q_v1 = '<a target="_blank" href="https://www.baidu.com">问卷链接</a>';
-var Q_v2 = '<a target="_blank" href="https://www.baidu.com">问卷链接</a>';
+var Q_v1 = '<a target="_blank" href="https://www.wjx.cn/jq/104106776.aspx">问卷链接</a>';
+var Q_v2 = '<a target="_blank" href="https://www.wjx.cn/jq/104122961.aspx">问卷链接</a>';
 var Final_Q = [];
 var randomNum = parseInt(Math.random()*2+1); // 生成1和2中的随机数
 
