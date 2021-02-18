@@ -201,7 +201,7 @@ var keywordsInstr = {
     <p style='font: bold  20px 等线; text-align: left; line-height:25px'>
     接下来您将阅读到5篇科学论文风格的说明文。<br/><br/>
     为了更好地理解文章内容，把握文章核心主旨、观点，<br/>
-    <span style='color:red'>【为每一篇文章总结出能够体现文章要义的若干个关键词】<br/></span>是一种较为有效的方法。<br/>
+    <span style='color:red'>为每一篇文章总结出能够体现文章要义的若干个关键词<br/></span>是一种较为有效的方法。<br/>
     e.g.《泰坦尼克号》的关键词为：冰山、船遇难、悲剧……<br/><br/>
     我们将在练习阶段给出这一方法的一个具体示例。<br/>
     请您在此次阅读任务中使用这种方法。<br/><br/>
