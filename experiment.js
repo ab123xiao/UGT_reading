@@ -201,7 +201,7 @@ var keywordsInstr = {
     <p style='font: bold  20px 等线; text-align: left; line-height:25px'>
     接下来您将阅读到5篇科学论文风格的说明文。<br/><br/>
     为了更好地理解文章内容，把握文章核心主旨、观点，<br/>
-    <span style='color:red'>为每一篇文章总结出能够体现文章要义的若干个关键词<br/></span>是一种较为有效的方法。<br/>
+    <span style='color:red'>【为每一篇文章总结出能够体现文章要义的若干个关键词】<br/></span>是一种较为有效的方法。<br/>
     e.g.《泰坦尼克号》的关键词为：冰山、船遇难、悲剧……<br/><br/>
     我们将在练习阶段给出这一方法的一个具体示例。<br/>
     请您在此次阅读任务中使用这种方法。<br/><br/>
@@ -426,38 +426,38 @@ var read_Instr = {
 
 // 《动物园》网页链接
 var zoo_link_zhihu = '<a target=_blank href="https:/zhuanlan.zhihu.com/p/342343116">《动物园》</a>',
-zoo_link_js = '<a target=_blank href="https://page.om.qq.com/page/O0loOb9FFoqdSq_PFUZRuXOw0">《动物园》</a>',
-zoo_link_db = '<a target=_blank href="https://www.douban.com/note/790655431/">《动物园》</a>',
+zoo_link_js = '<a target=_blank href="https://page.om.qq.com/page/O9SMw332YXasjuB2eriXIgWQ0">《动物园》</a>',
+zoo_link_db = '<a target=_blank href="https://baijiahao.baidu.com/builder/preview/s?id=1693086878109889025">《动物园》</a>',
 zoo_link_bili = '<a target=_blank href="https://www.bilibili.com/read/cv9159133">《动物园》</a>',
-zoo_link_toutiao = '<a target=_blank href="https://www.toutiao.com/i6914601525617164804/">《动物园》</a>';
+zoo_link_toutiao = '<a target=_blank href="https://www.toutiao.com/i6934901400824562208/">《动物园》</a>';
 
 // 《电视新闻》网页链接
 var news_link_zhihu = '<a target=_blank href="https://zhuanlan.zhihu.com/p/342354069">《电视新闻》</a>',
-news_link_js = '<a target=_blank href="https://page.om.qq.com/page/Oca9xsC3SdDxCJ2DatIti3bg0">《电视新闻》</a>',
-news_link_db = '<a target=_blank href="https://www.douban.com/note/790655504/">《电视新闻》</a>',
+news_link_js = '<a target=_blank href="https://page.om.qq.com/page/OgzQ3j3NfM_cEo3ePrOSyBgA0">《电视新闻》</a>',
+news_link_db = '<a target=_blank href="https://baijiahao.baidu.com/builder/preview/s?id=1693087442880330039">《电视新闻》</a>',
 news_link_bili = '<a target=_blank href="https://www.bilibili.com/read/cv9159160">《电视新闻》</a>',
-news_link_toutiao = '<a target=_blank href="https://www.toutiao.com/i6914602700927894023/">《电视新闻》</a>';
+news_link_toutiao = '<a target=_blank href="https://www.toutiao.com/i6934902473257665035/">《电视新闻》</a>';
 
 // 《植物》网页链接
 var plants_link_zhihu = '<a target=_blank href="https://zhuanlan.zhihu.com/p/342358567">《植物》</a>',
-plants_link_js = '<a target=_blank href="https://page.om.qq.com/page/ODOmIQk3whymrShisJ5cG6Kw0">《植物》</a>',
-plants_link_db = '<a target=_blank href="https://www.douban.com/note/790655852/">《植物》</a>',
+plants_link_js = '<a target=_blank href="https://page.om.qq.com/page/ORq7yTg8TWqIM_kFHDRpiaIQ0">《植物》</a>',
+plants_link_db = '<a target=_blank href="https://baijiahao.baidu.com/builder/preview/s?id=1693087627244630471">《植物》</a>',
 plants_link_bili = '<a target=_blank href="https://www.bilibili.com/read/cv9159180">《植物》</a>',
-plants_link_toutiao = '<a target=_blank href="https://www.toutiao.com/i6914603678645273096/">《植物》</a>';
+plants_link_toutiao = '<a target=_blank href="https://www.toutiao.com/i6934902691944595972/">《植物》</a>';
 
 // 《职业妇女》网页链接
 var wm_link_zhihu = '<a target=_blank href="https://zhuanlan.zhihu.com/p/342359448">《职业妇女》</a>',
-wm_link_js = '<a target=_blank href="https://page.om.qq.com/page/OiedFj7lRTYQgSvJzlDn7wkQ0">《职业妇女》</a>',
-wm_link_db = '<a target=_blank href="https://www.douban.com/note/790656015/">《职业妇女》</a>',
+wm_link_js = '<a target=_blank href="https://page.om.qq.com/page/OteYEYCG_n6o0igr-HTAWE1Q0">《职业妇女》</a>',
+wm_link_db = '<a target=_blank href="https://baijiahao.baidu.com/builder/preview/s?id=1693087836912785523">《职业妇女》</a>',
 wm_link_bili = '<a target=_blank href="https://www.bilibili.com/read/cv9159201">《职业妇女》</a>',
-wm_link_toutiao = '<a target=_blank href="https://www.toutiao.com/i6914603665563173389/">《职业妇女》</a>';
+wm_link_toutiao = '<a target=_blank href="https://www.toutiao.com/i6934903401465725479/">《职业妇女》</a>';
 
 // 《赝品》网页链接
 var cf_link_zhihu = '<a target=_blank href="https://zhuanlan.zhihu.com/p/342361231">《赝品》</a>',
-cf_link_js = '<a target=_blank href="https://page.om.qq.com/page/OTZMIYp3LkFJdvtXaKGZUd6Q0">《赝品》</a>',
-cf_link_db = '<a target=_blank href="https://www.douban.com/note/790656150/">《赝品》</a>',
+cf_link_js = '<a target=_blank href="https://page.om.qq.com/page/OoKF9Jdt-LSNtIFecoMwW7iQ0">《赝品》</a>',
+cf_link_db = '<a target=_blank href="https://baijiahao.baidu.com/builder/preview/s?id=1693087957763535487">《赝品》</a>',
 cf_link_bili = '<a target=_blank href="https://www.bilibili.com/read/cv9159223">《赝品》</a>',
-cf_link_toutiao = '<a target=_blank href="https://www.toutiao.com/i6914602760113537539/">《赝品》</a>';
+cf_link_toutiao = '<a target=_blank href="https://www.toutiao.com/i6934903734178693665/">《赝品》</a>';
 
 var articleArray = ['zoo', 'news','plants','wm','cf'];
 var linkArray = ['zhihu', 'js', 'db', 'bili', 'toutiao'];
@@ -853,7 +853,7 @@ var wm_items = [
     <option>C.“妇女已经开始外出工作，她们致使一部分养家糊口的人失业。”</option>
     <option>D.“妇女在工厂里辛劳工作必定像离开了水的鱼儿一样的痛苦。”</option>
     </select></p>`, },
-  { data: { question: 'wm2', correct_answer: "C", type: "detail"},
+  { data: { question: 'wm2', correct_answer: "A", type: "detail"},
     preamble: '【《职业妇女》 第2题】<br/>下面哪个问题在文中没有提到？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
@@ -908,7 +908,7 @@ var wm_items = [
     <option>D.未婚妇女的女儿</option>
     </select></p>`, },
 
-  { data: { question: 'wm7', correct_answer: "B", type: "inference"},
+  { data: { question: 'wm7', correct_answer: "D", type: "inference"},
     preamble: '【《职业妇女》 第7题】<br/>在19世纪晚期下面哪项措施可以扭转妇女外出工作的现状？',
     html: `
     <p style="font-size:14px; font-family: 等线; font-weight:normal">(请选择您认为正确的选项)</p>
